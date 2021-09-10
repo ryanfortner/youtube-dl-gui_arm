@@ -26,6 +26,8 @@ jobs:
           cd youtube-dl-gui
           
       - name: Build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd $DIR/youtube-dl-gui
           npm install
