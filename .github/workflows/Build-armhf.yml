@@ -1,4 +1,4 @@
-name: Build
+name: Build-armhf
 
 on:
   release:
@@ -40,5 +40,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           file: '${{ env.DIR }}/youtube-dl-gui/dist/${{ env.DEB }}'
-          file: '${{ env.DIR }}/youtube-dl-gui/dist/${{ env.DEB64 }}'
           type: 'application/x-debian-package'
