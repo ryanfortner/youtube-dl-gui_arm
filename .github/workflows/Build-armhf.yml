@@ -30,8 +30,6 @@ jobs:
           cd $DIR/youtube-dl-gui
           npm install
           npx electron-builder --linux --armv7l
-          npx electron-builder --linux --arm64
-          echo "DEB64=$(basename dist/*arm64.AppImage)" >> $GITHUB_ENV 
           echo "DEB=$(basename dist/*armv7l.AppImage)" >> $GITHUB_ENV 
           
       - name: Upload to release
